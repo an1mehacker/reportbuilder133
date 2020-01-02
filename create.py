@@ -9,14 +9,12 @@ print droppedFile
 
 months = (
         'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-        'September', 'October', 'November', 'December', 'janeiro', 'fevereiro', 'março',
-        'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro',
-        'dezembro'
+        'September', 'October', 'November', 'December'
          )
 
 document = Document()
 
-# Import do documento, deverá aparecer neste formato
+# Document import and parsing
 
 records = []
 total_letters = 0
@@ -56,7 +54,8 @@ for line in docx_text:
     else:
         letter_count += len(line)
                 
-#Apartir dos resultados lidos do ficheiro grande, gerar a tabela
+#From the results, generate the table and the letter count
+
 p = document.add_paragraph('Total letras: ' + str(total_letters))
 table = document.add_table(rows=1, cols=3)
 table.allow_autofit = True
@@ -71,7 +70,7 @@ for date, link, letter_count in records:
     row_cells[2].text = str(letter_count)
 
 time = str(datetime.now().strftime('%Y-%m-%d-%H%M'))
-document.save('Relatório-' + time + '.docx')
+document.save('Report-' + time + '.docx')
 
     
 
