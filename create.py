@@ -56,7 +56,7 @@ for line in docx_text:
                 
 #From the results, generate the table and the letter count
 
-p = document.add_paragraph('Total letras: ' + str(total_letters))
+p = document.add_paragraph('Total letters: ' + str(total_letters))
 table = document.add_table(rows=1, cols=3)
 table.allow_autofit = True
 hdr_cells = table.rows[0].cells
