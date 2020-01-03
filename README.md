@@ -5,6 +5,7 @@ the most basic functionality.
 Reads a word file in the format:
 
 1 de [month]
+
 https://link1.com
 
 Lorem Ipsum ...
@@ -14,6 +15,7 @@ asfcasfasdcf
 asfasdf
 
 https://link2.com
+
 Lorem Ipsum ...
 
 asfcasfasdcf
